@@ -50,18 +50,18 @@ PHP does not support explicit type definition in variable declarations. This mea
 ## Magic Hash -- 
 "e" is a numerical constant and it equals 2.71828. when you have a hash like 1e1 this would equal 10 or 1 and 1 zero. likewise if you had a 5e10 it would be a 5 and 10 zeros.
 
-    php > var_dump(5e10 == 50000000000); </br>
-    bool(true)   </br>
-    Notes: with type juggling we are assuming that the hash or string is represented as a string, however in php the type is determined by the context in which the variable is used.
+   php > var_dump(5e10 == 50000000000); </br>
+   bool(true)   </br>
+   Notes: with type juggling we are assuming that the hash or string is represented as a string, however in php the type is determined by the context in which the variable is used.
 
-    php > var_dump('5e10qwe' == 50000000000);  </br>
-    bool(true)  </br>
-    php > var_dump('5e10qwe' == '50000000000');  </br>
-    bool(false)  </br>
-    
-    As we can see when the string is compared with an integer the string is treated like an integer. 
-    This means that if a hash has 0e123 it will = 0   </br>
-    Note: This will more likely happen in MD5 and SHA1 hash values
+   php > var_dump('5e10qwe' == 50000000000);  </br>
+   bool(true)  </br>
+   php > var_dump('5e10qwe' == '50000000000');  </br>
+   bool(false)  </br>
+   
+   As we can see when the string is compared with an integer the string is treated like an integer. 
+   This means that if a hash has 0e123 it will = 0   </br>
+   Note: This will more likely happen in MD5 and SHA1 hash values
 
 
 ## What does all of this mean for us?
